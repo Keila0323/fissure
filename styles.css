@@ -526,13 +526,13 @@ a, button, [role='button'], input, textarea, select {
   font-weight: 900;
   letter-spacing: -0.05em;
   line-height: 1;
-  color: var(--color-surface-offset);
-  -webkit-text-stroke: 2px var(--color-divider);
+  color: var(--color-text-faint);
+  -webkit-text-stroke: 1px var(--color-border);
 }
 
 [data-theme='dark'] .step-num {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--color-divider);
+  color: var(--color-text-faint);
+  -webkit-text-stroke: 1px var(--color-divider);
 }
 
 .step-content h3 {
