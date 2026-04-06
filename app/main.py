@@ -11,7 +11,7 @@ load_dotenv()
 
 from app.routers import analyze
 
-app = FastAPI(title="ATO Risk Scorer", version="1.0.0")
+app = FastAPI(title="Fissure", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,

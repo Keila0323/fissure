@@ -1,4 +1,4 @@
-/* ATO Risk Scorer — Frontend Logic */
+/* Fissure — Frontend Logic */
 
 // ── Theme Toggle ──────────────────────────────────────────
 (function () {
@@ -26,7 +26,7 @@
 // ── API Base ───────────────────────────────────────────────
 const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? ''
-  : 'https://ato-risk-scorer.onrender.com';
+  : 'https://fissure.onrender.com';
 
 // ── Character counter ──────────────────────────────────────
 const textarea = document.getElementById('flow-input');

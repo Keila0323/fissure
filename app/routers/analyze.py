@@ -11,7 +11,7 @@ class AnalyzeRequest(BaseModel):
 
 @router.get("/health")
 async def health():
-    return {"status": "ok", "service": "ato-risk-scorer"}
+    return {"status": "ok", "service": "fissure"}
 
 
 @router.post("/analyze")

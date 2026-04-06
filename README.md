@@ -1,6 +1,6 @@
-# ATO Risk Scorer
+# Fissure
 
-**AI-powered account takeover vulnerability analysis for banking and fintech recovery flows.**
+**AI-powered account takeover vulnerability analysis for banking and fintech.**
 
 Paste a description of your institution's account recovery process and get a risk score, severity-ranked vulnerability breakdown, lifecycle gap analysis, and specific remediation controls — powered by GPT-4o.
 
@@ -10,14 +10,14 @@ Paste a description of your institution's account recovery process and get a ris
 
 | Deployment | URL |
 |---|---|
-| **Frontend (GitHub Pages)** | https://keila0323.github.io/ato-risk-scorer |
-| **Backend API (Render)** | https://ato-risk-scorer.onrender.com |
+| **Frontend (GitHub Pages)** | https://keila0323.github.io/fissure |
+| **Backend API (Render)** | https://fissure.onrender.com |
 
 ---
 
 ## What It Does
 
-Account recovery is the #1 ATO (Account Takeover) entry point — attackers exploit weaker recovery controls to bypass stronger onboarding protections. ATO Risk Scorer analyzes described recovery flows against known attack patterns and outputs:
+Account recovery is the #1 ATO (Account Takeover) entry point — attackers exploit weaker recovery controls to bypass stronger onboarding protections. Fissure analyzes described recovery flows against known attack patterns and outputs:
 
 - **Risk Score** (0–100) with tier classification (Critical / High / Moderate / Low)
 - **Vulnerability Breakdown** — severity-ranked, each linked to a specific ATO attack vector
@@ -52,8 +52,8 @@ Account recovery is the #1 ATO (Account Takeover) entry point — attackers expl
 ## Running Locally
 
 ```bash
-git clone https://github.com/Keila0323/ato-risk-scorer.git
-cd ato-risk-scorer
+git clone https://github.com/Keila0323/fissure.git
+cd fissure
 pip install -r requirements.txt
 cp .env.example .env
 # Add your OPENAI_API_KEY to .env
