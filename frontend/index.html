@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATO Risk Scorer — Account Takeover Vulnerability Analysis</title>
+  <meta name="description" content="Paste your bank or fintech's account recovery flow and get an AI-powered risk score, vulnerability breakdown, and remediation controls in seconds." />
+  <meta property="og:title" content="ATO Risk Scorer" />
+  <meta property="og:description" content="AI-powered account takeover vulnerability analysis for banking and fintech recovery flows." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Cabinet Grotesk (display) + Satoshi (body) via Fontshare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600,700,800,900&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="ATO Risk Scorer home">
+        <svg class="logo-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="34" height="34" rx="8" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 26 L18 10 L26 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 20 L23 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="18" cy="10" r="2.5" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">ATO Risk Scorer</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#analyze" class="nav-cta">Analyze your flow</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode" title="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-headline">
+      <div class="hero-inner">
+        <div class="hero-left">
+        <div class="hero-label">Account Takeover Intelligence</div>
+        <h1 class="hero-headline" id="hero-headline">
+          Does your recovery<br/>flow have a<br/>
+          <em class="headline-accent">back door?</em>
+        </h1>
+        <p class="hero-sub">
+          Paste a description of your bank or fintech's account recovery process.
+          AI analyzes it for ATO vulnerability patterns, returning a risk score,
+          severity-ranked vulnerabilities, and specific controls to close each gap.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">61%</span>
+            <span class="stat-label">of breaches involve stolen credentials</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">#1</span>
+            <span class="stat-label">recovery is the most exploited ATO entry point</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">$12B</span>
+            <span class="stat-label">annual ATO losses in financial services</span>
+          </div>
+        </div>
+        <a href="#analyze" class="btn-primary hero-cta">Analyze your flow &darr;</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="risk-gauge-demo">
+          <div class="gauge-ring">
+            <svg viewBox="0 0 120 120" class="gauge-svg">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="var(--color-border)" stroke-width="8"/>
+              <circle cx="60" cy="60" r="52" fill="none" stroke="var(--color-risk-high)"
+                stroke-width="8" stroke-dasharray="230 327" stroke-dashoffset="82"
+                stroke-linecap="round" class="gauge-arc"/>
+            </svg>
+            <div class="gauge-label">
+              <span class="gauge-score">67</span>
+              <span class="gauge-tier">HIGH RISK</span>
+            </div>
+          </div>
+          <div class="demo-vulns">
+            <div class="demo-vuln critical">
+              <span class="vuln-dot"></span>
+              <span>SIM-swap via phone OTP</span>
+              <span class="vuln-sev">Critical</span>
+            </div>
+            <div class="demo-vuln high">
+              <span class="vuln-dot"></span>
+              <span>KBA from public OSINT</span>
+              <span class="vuln-sev">High</span>
+            </div>
+            <div class="demo-vuln high">
+              <span class="vuln-dot"></span>
+              <span>Support channel override</span>
+              <span class="vuln-sev">High</span>
+            </div>
+            <div class="demo-vuln moderate">
+              <span class="vuln-dot"></span>
+              <span>Stale token post-recovery</span>
+              <span class="vuln-sev">Moderate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="hiw-title">
+      <div class="section-inner">
+        <div class="section-label">Process</div>
+        <h2 class="section-title" id="hiw-title">Three steps from description to remediation</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Describe your recovery flow</h3>
+              <p>Paste a plain-language or technical description of how your institution handles account recovery, identity verification, or the full lifecycle from onboarding through deactivation. No code required.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>AI maps vulnerability patterns</h3>
+              <p>GPT-4o analyzes the flow against known ATO attack patterns — SIM-swapping, OSINT-assisted KBA bypass, support channel social engineering, dormant account exploitation, and more. Each vulnerability is linked to a specific attack vector.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Receive a scored, actionable report</h3>
+              <p>Get a 0–100 risk score with tier classification, a ranked vulnerability breakdown with severity levels, lifecycle gap analysis across onboarding through offboarding, and specific control recommendations for each gap.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXT CALLOUT -->
+    <section class="callout-strip" aria-label="Why this matters">
+      <div class="section-inner">
+        <blockquote class="callout-quote">
+          <p>"Account recovery is the #1 ATO entry point — attackers don't break in through the front door. They walk through the recovery gate you left open."</p>
+        </blockquote>
+        <div class="callout-context">
+          <p>Financial institutions face a structural problem: product, security, fraud, and compliance teams each own different pieces of the identity lifecycle. The gaps between them are where attackers operate. The Synapse/Yotta collapse in 2024 is one documented example of lifecycle fragmentation leading to systemic failure.</p>
+          <p>ATO Risk Scorer was built to surface those gaps before an attacker finds them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANALYZER -->
+    <section class="analyzer-section" id="analyze" aria-labelledby="analyzer-title">
+      <div class="section-inner">
+        <div class="section-label">Analyzer</div>
+        <h2 class="section-title" id="analyzer-title">Analyze your recovery flow</h2>
+        <p class="section-sub">Describe how users recover account access at your institution. Include authentication methods, verification steps, support escalation paths, and any self-service options. The more detail, the more precise the analysis.</p>
+
+        <div class="analyzer-layout">
+          <div class="analyzer-form-col">
+            <form id="analyze-form" novalidate>
+              <div class="form-group">
+                <label for="flow-input">Recovery flow description</label>
+                <textarea
+                  id="flow-input"
+                  name="flow_description"
+                  rows="10"
+                  placeholder="Example: Users who forget their password can reset via SMS OTP sent to their registered phone number. They must also answer two security questions (mother's maiden name, first pet). Customer support can override the flow if the user provides their SSN last 4 digits and date of birth..."
+                  required
+                  minlength="20"
+                  maxlength="5000"
+                  aria-describedby="flow-hint"
+                ></textarea>
+                <span class="form-hint" id="flow-hint">Minimum 20 characters. Up to 5,000 characters accepted.</span>
+                <div class="char-count" aria-live="polite"><span id="char-num">0</span> / 5000</div>
+              </div>
+              <button type="submit" class="btn-primary submit-btn" id="submit-btn">
+                <span class="btn-text">Analyze for ATO vulnerabilities</span>
+                <span class="btn-loading" hidden>
+                  <svg class="spinner" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4" stroke-dashoffset="10"/>
+                  </svg>
+                  Analyzing...
+                </span>
+              </button>
+              <p class="form-disclaimer">Analysis is performed by GPT-4o. Do not include real customer PII or production credentials.</p>
+            </form>
+          </div>
+
+          <!-- RESULTS PANEL -->
+          <div class="results-col" id="results-panel" aria-live="polite" aria-atomic="true">
+            <div class="results-empty" id="results-empty">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>Your vulnerability report will appear here</p>
+            </div>
+
+            <div class="results-content" id="results-content" hidden>
+              <!-- Score header -->
+              <div class="score-header" id="score-header">
+                <div class="score-ring-wrap">
+                  <svg class="score-ring" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle cx="60" cy="60" r="52" fill="none" stroke="var(--color-border)" stroke-width="8"/>
+                    <circle cx="60" cy="60" r="52" fill="none" stroke="var(--score-arc-color, var(--color-risk-high))"
+                      stroke-width="8" stroke-dasharray="0 327" stroke-dashoffset="82"
+                      stroke-linecap="round" class="score-arc" id="score-arc"/>
+                  </svg>
+                  <div class="score-ring-label">
+                    <span class="score-number" id="score-number">0</span>
+                    <span class="score-unit">/ 100</span>
+                  </div>
+                </div>
+                <div class="score-meta">
+                  <div class="score-tier" id="score-tier">—</div>
+                  <p class="score-summary" id="score-summary"></p>
+                </div>
+              </div>
+
+              <!-- Lifecycle gaps -->
+              <div class="lifecycle-section">
+                <h3 class="results-section-title">Lifecycle Gap Analysis</h3>
+                <div class="lifecycle-grid" id="lifecycle-grid"></div>
+              </div>
+
+              <!-- Vulnerabilities -->
+              <div class="vulnerabilities-section">
+                <h3 class="results-section-title">Vulnerability Breakdown</h3>
+                <div class="vuln-list" id="vuln-list"></div>
+              </div>
+
+              <!-- Controls -->
+              <div class="controls-section">
+                <h3 class="results-section-title">Priority Controls</h3>
+                <ul class="controls-list" id="controls-list"></ul>
+              </div>
+            </div>
+
+            <!-- Error state -->
+            <div class="results-error" id="results-error" hidden>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <p id="error-message">Analysis failed. Please try again.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILT WITH -->
+    <section class="built-with" aria-label="Technology stack">
+      <div class="section-inner">
+        <div class="section-label">Stack</div>
+        <div class="built-with-row">
+          <span>Built with</span>
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">GPT-4o</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Vanilla JS</span>
+          <span class="stack-tag">Render</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo-text">ATO Risk Scorer</span>
+        <p>AI-powered account takeover vulnerability analysis for banking and fintech.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Keila0323/ato-risk-scorer" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#analyze">Analyze</a>
+      </div>
+      <p class="footer-credit">Built by Keila Olaverria &middot; OpenAI × Handshake Codex Creator Challenge 2026</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
