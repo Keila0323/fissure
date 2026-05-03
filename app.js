@@ -24,7 +24,7 @@
 })();
 
 // ── API Base ───────────────────────────────────────────────
-const API_BASE = 'https://fissure.onrender.com';
+const API_BASE = 'https://fissure-eq8k.onrender.com';
 
 // ── Character counter ──────────────────────────────────────
 const textarea = document.getElementById('flow-input');
